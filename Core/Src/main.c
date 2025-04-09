@@ -93,6 +93,8 @@ int main(void)
   MX_SPI3_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  //开启DMA通道
+  HAL_UARTEx_ReceiveToIdle_DMA(&huart1,rx_buffer,BUF_SIZE);         //EX代表拓展函数，Idle代表串口空闲中断
 
   /* USER CODE END 2 */
 
@@ -148,7 +150,16 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
+  if (huart == &huart1) {                                                   //判断串口
 
+    HAL_UART_Transmit(&huart1, rx_buffer, Size, 0xffff);          //将接收到的数据发送到上位机
+
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart1,rx_buffer,BUF_SIZE);         //重新打开dma接收通道
+
+  }
+
+}
 /* USER CODE END 4 */
 
 /**

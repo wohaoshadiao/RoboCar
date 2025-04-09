@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.30"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "test5.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test5.elf-Debug-7558c21a24c13a8492fa.json",
+					"jsonFile" : "target-test5.elf-8fbf1c487d56a42f0e3b.json",
 					"name" : "test5.elf",
 					"projectIndex" : 0
 				}

@@ -19,9 +19,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
-
+#include "string.h"
 /* USER CODE BEGIN 0 */
-
+uint8_t rx_buffer[BUF_SIZE];  // 创建接收缓存,大小为BUF_SIZE
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -158,4 +158,16 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 
 /* USER CODE BEGIN 1 */
 
+// void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+// {
+//   if (huart->Instance == USART1)
+//   {
+//     Size = BUF_SIZE - __HAL_DMA_GET_COUNTER(&hdma_usart1_rx);
+//     HAL_UART_Transmit(&huart1, rx_buffer, Size, 0xffff);	//将接受到的数据再发回上位机
+//     memset(rx_buffer, 0, Size);
+//
+//     //放在void USART1_IRQHandler(void)函数里，不要放在这
+//     //HAL_UARTEx_ReceiveToIdle_DMA(&huart1,rx_buffer,BUF_SIZE);不要放在这里，如果放在这里，不仅上位机的波特率改变不能正常接收，就算改回去了也会接收不了
+//   }
+// }
 /* USER CODE END 1 */

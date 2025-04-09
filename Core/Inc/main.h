@@ -36,7 +36,8 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+#define BUF_SIZE 200
+  extern uint8_t rx_buffer[BUF_SIZE];  // EXTERN声明全局变量，创建接收缓存,大小为BUF_SIZE
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

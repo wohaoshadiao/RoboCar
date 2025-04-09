@@ -93,7 +93,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu11 -fdiagnostics-color=always"
+					"fragment" : "-std=gnu11 -fdiagnostics-color=always"
 				},
 				{
 					"backtrace" : 5,
@@ -192,8 +192,6 @@
 				15,
 				16,
 				17,
-				72,
-				73,
 				74,
 				75,
 				76,
@@ -204,15 +202,14 @@
 				81,
 				82,
 				83,
-				84
+				84,
+				85,
+				86
 			]
 		},
 		{
 			"compileCommandFragments" : 
 			[
-				{
-					"fragment" : "-g"
-				},
 				{
 					"backtrace" : 5,
 					"fragment" : "-mcpu=cortex-m3"
@@ -309,10 +306,6 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
 				"fragment" : "",
 				"role" : "flags"
 			},
@@ -373,7 +366,6 @@
 				20,
 				21,
 				22,
-				23,
 				24,
 				25,
 				26,
@@ -394,7 +386,7 @@
 				41,
 				42,
 				43,
-				45,
+				44,
 				46,
 				47,
 				48,
@@ -420,7 +412,8 @@
 				68,
 				69,
 				70,
-				71
+				71,
+				72
 			]
 		},
 		{
@@ -438,8 +431,6 @@
 				15,
 				16,
 				17,
-				72,
-				73,
 				74,
 				75,
 				76,
@@ -450,7 +441,9 @@
 				81,
 				82,
 				83,
-				84
+				84,
+				85,
+				86
 			]
 		},
 		{
@@ -458,8 +451,10 @@
 			"sourceIndexes" : 
 			[
 				19,
-				44,
-				85
+				23,
+				45,
+				73,
+				87
 			]
 		}
 	],
@@ -591,6 +586,11 @@
 			"backtrace" : 1,
 			"path" : "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Drivers/CMSIS/Device/ST/STM32F1xx/LICENSE.txt",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
@@ -836,6 +836,11 @@
 			"backtrace" : 1,
 			"path" : "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Drivers/STM32F1xx_HAL_Driver/LICENSE.txt",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
